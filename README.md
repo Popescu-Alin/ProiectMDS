@@ -13,3 +13,7 @@ Nicolae Eduard-Constantin
 Popescu Vasile-Alin
 
 Udriste Mihai-Viorel
+
+# Database Design
+
+![WhatsApp Image 2023-03-12 at 13 33 29](https://user-images.githubusercontent.com/93095672/224541863-addfb68e-6646-47d0-ab0c-d5d5e0fb358f.jpeg)
