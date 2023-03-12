@@ -5,7 +5,11 @@ The online shop would be built using ASP.NET, which is a web development framewo
 
 # Team Members
 Fanica Narcis-Alexandru 
-Micu Diana-Roberta
+
+Micu Diana-Roberta 
+
 Nicolae Eduard-Constantin
+
 Popescu Vasile-Alin
+
 Udriste Mihai-Viorel
