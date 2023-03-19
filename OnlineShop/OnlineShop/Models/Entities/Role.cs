@@ -1,6 +1,9 @@
-﻿namespace inceputproiectMds.Models.Entities
+﻿using inceputproiectMds.Models.Base;
+
+namespace inceputproiectMds.Models.Entities
 {
-    public class Role
+    public class Role:BaseEntity
     {
+        public string RoleName { get; set; }
     }
 }
