@@ -22,3 +22,7 @@ Udriste Mihai-Viorel
 
 
 ![Screenshot 2023-03-12 133753](https://user-images.githubusercontent.com/93095672/224542092-71dcdf08-5c56-4df6-b24a-b44e569eb2ce.png)
+
+# UML Use Case Diagram
+
+![UML- Use Case Diagram](https://user-images.githubusercontent.com/93095672/230381930-45695369-1d14-4864-b184-a5fba247b770.png)
