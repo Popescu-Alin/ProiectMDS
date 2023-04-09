@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace inceputproiectMds.Models.Entities
 {
-    public class Address
+    public class Address:BaseEntity
     {
         [Key]
         public Guid AddressId { get; set; }

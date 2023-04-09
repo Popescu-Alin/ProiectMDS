@@ -1,15 +1,14 @@
-﻿using OnlineShop.Models.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting.Server;
 using inceputproiectMds.Models.Entities;
 
-namespace OnlineShop.Models.Entities
+namespace OnlineShop.Data
 {
-    public class ProiectMDSContext: DbContext
+    public class ProiectMDSContext : DbContext
     {
         public ProiectMDSContext()
         { }
- 
+
         public ProiectMDSContext(DbContextOptions<ProiectMDSContext> options) : base(options)
         { }
 
@@ -42,7 +41,8 @@ namespace OnlineShop.Models.Entities
             base.OnModelCreating(modelBuilder);
             // definire primary key compus
             modelBuilder.Entity<Cart>()
-            .HasKey(cp => new {
+            .HasKey(cp => new
+            {
                 cp.ProductId,
                 cp.UserId
             });
@@ -65,7 +65,8 @@ namespace OnlineShop.Models.Entities
             .HasForeignKey(ab => ab.UserId);
 
             modelBuilder.Entity<ProductOrder>()
-             .HasKey(cp => new {
+             .HasKey(cp => new
+             {
                  cp.ProductId,
                  cp.OrderId
              });
@@ -79,7 +80,8 @@ namespace OnlineShop.Models.Entities
             .HasForeignKey(ab => ab.OrderId);
 
             modelBuilder.Entity<UserAddress>()
-             .HasKey(cp => new {
+             .HasKey(cp => new
+             {
                  cp.UserId,
                  cp.AddressId
              });
@@ -93,7 +95,8 @@ namespace OnlineShop.Models.Entities
             .HasForeignKey(ab => ab.UserId);
 
             modelBuilder.Entity<UserCard>()
-             .HasKey(cp => new {
+             .HasKey(cp => new
+             {
                  cp.UserId,
                  cp.CardId
              });

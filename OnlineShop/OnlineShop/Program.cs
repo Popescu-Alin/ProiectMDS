@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using OnlineShop.Models.Entities;
+using OnlineShop.Data;
+using OnlineShop.Repositories.CardRepository;
+using OnlineShop.Repositories.CategoryRepositories;
+using OnlineShop.Repositories.ProductsRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,9 @@ builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ProiectMDSContext>(options => options.UseSqlServer(connectionString));
 
+builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
+builder.Services.AddTransient<IProductsRepository, ProductsRepository>();
+builder.Services.AddTransient<ICardRepository, CardRepository>();
 var app = builder.Build();
 
 

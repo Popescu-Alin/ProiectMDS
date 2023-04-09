@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace inceputproiectMds.Models.Entities
 {
-    public class Cart
+    public class Cart: BaseEntity
     {
         public Guid ProductId { get; set; }
         public Guid UserId { get; set; }

@@ -1,6 +1,8 @@
-﻿namespace inceputproiectMds.Models.Entities
+﻿using inceputproiectMds.Models.Base;
+
+namespace inceputproiectMds.Models.Entities
 {
-    public class UserAddress
+    public class UserAddress: BaseEntity
     {
         public Guid ?AddressId { get; set; }
         public Guid ?UserId { get; set; }

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace inceputproiectMds.Models.Entities
 {
-    public class Review
+    public class Review:BaseEntity
     {
         [Key]
         public Guid ReviewId { get; set; }

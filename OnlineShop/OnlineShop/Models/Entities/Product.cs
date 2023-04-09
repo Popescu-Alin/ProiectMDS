@@ -5,7 +5,7 @@ using inceputproiectMds.Models.Base;
 
 namespace inceputproiectMds.Models.Entities
 {
-    public class Product
+    public class Product: BaseEntity
     {
         [Key]
         public Guid ProductId { get; set; }

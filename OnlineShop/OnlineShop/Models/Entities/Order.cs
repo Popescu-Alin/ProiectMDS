@@ -4,7 +4,7 @@ using inceputproiectMds.Models.Base;
 
 namespace inceputproiectMds.Models.Entities
 {
-    public class Order
+    public class Order: BaseEntity
     {
         [Key]
         public Guid OrderId { get; set; }
