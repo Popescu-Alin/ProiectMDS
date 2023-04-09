@@ -5,9 +5,10 @@ using inceputproiectMds.Models.Base;
 
 namespace inceputproiectMds.Models.Entities
 {
-    public class Product: BaseEntity 
+    public class Product
     {
-       
+        [Key]
+        public Guid ProductId { get; set; }
 
         [Required(ErrorMessage = "Titlul este obligatoriu")]
         public string Title { get; set; }
@@ -39,7 +40,7 @@ namespace inceputproiectMds.Models.Entities
 
         public virtual ICollection<Cart>? Carts { get; set; }
 
-        public virtual ICollection<ProductOrder>? Orders { get; set; }
+        public virtual ICollection<ProductOrder>? Orders { get; set; }  
 
         [NotMapped]
         public IEnumerable<SelectListItem>? Categ { get; set; }
