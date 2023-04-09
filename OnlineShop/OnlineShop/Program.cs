@@ -17,8 +17,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ProiectMDSContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
-builder.Services.AddTransient<IProductsRepository, ProductsRepository>();
-builder.Services.AddTransient<ICardRepository, CardRepository>();
+builder.Services.AddTransient<IProductOrderRepository, ProductOrderRepository>();
+builder.Services.AddTransient<ICartRepository, CartRepository>();
 var app = builder.Build();
 
 

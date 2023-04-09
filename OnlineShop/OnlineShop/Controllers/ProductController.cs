@@ -7,10 +7,10 @@ namespace OnlineShop.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly IProductsRepository _productRepo;
+        private readonly IProductOrderRepository _productRepo;
        
 
-        public ProductController(IProductsRepository repo)
+        public ProductController(IProductOrderRepository repo)
         {
             _productRepo = repo;
         }

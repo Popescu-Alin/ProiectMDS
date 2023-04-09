@@ -2,9 +2,9 @@
 using OnlineShop.Data;
 using OnlineShop.Repositories.GenericRepository;
 
-namespace OnlineShop.Repositories.CardRepository
+namespace OnlineShop.Repositories.CartRepository
 {
-    public class CartRepository : GenericRepository<Card>, ICartRepository
+    public class CartRepository : GenericRepository<Cart>, ICartRepository
     {
         public CartRepository(ProiectMDSContext context) : base(context)
         {

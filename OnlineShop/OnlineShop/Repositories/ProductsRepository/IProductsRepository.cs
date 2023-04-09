@@ -3,7 +3,7 @@ using inceputproiectMds.Repositories.GenericRepository;
 
 namespace OnlineShop.Repositories.ProductsRepository
 {
-    public interface IProductsRepository: IGenericRepository<Product>
+    public interface IProductOrderRepository: IGenericRepository<Product>
     {
         public Task<List<Product>> FindRange(List<Guid> produseIds);
 

@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace OnlineShop.Repositories.ProductsRepository
 {
-    public class ProductsRepository : GenericRepository<Product>, IProductsRepository
+    public class ProductOrderRepository : GenericRepository<Product>, IProductOrderRepository
     {
-        public ProductsRepository(ProiectMDSContext context) : base(context)
+        public ProductOrderRepository(ProiectMDSContext context) : base(context)
         {
         }
 
