@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/OnlineShop/.vs
+/OnlineShop/OnlineShop/obj
+/OnlineShop/OnlineShop/bin
+/.vs
+/.vs/slnx.sqlite
