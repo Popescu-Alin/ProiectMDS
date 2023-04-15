@@ -1,6 +1,8 @@
-﻿namespace inceputproiectMds.Models.Entities
+﻿using inceputproiectMds.Models.Base;
+
+namespace inceputproiectMds.Models.Entities
 {
-    public class ProductOrder
+    public class ProductOrder: BaseEntity
     {
         public Guid? OrderId { get; set; }
         public Guid? ProductId { get; set; }

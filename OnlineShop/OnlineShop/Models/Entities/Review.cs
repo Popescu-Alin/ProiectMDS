@@ -5,7 +5,8 @@ namespace inceputproiectMds.Models.Entities
 {
     public class Review:BaseEntity
     {
-       
+        [Key]
+        public Guid ReviewId { get; set; }
 
         [MaxLength(300, ErrorMessage = "Lungimea maxima trebuie sa fie de 300 caractere")]
         [Required(ErrorMessage = "Continutul este obligatoriu")]

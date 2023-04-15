@@ -1,9 +1,12 @@
 ﻿using inceputproiectMds.Models.Base;
+using System.ComponentModel.DataAnnotations;
 
 namespace inceputproiectMds.Models.Entities
 {
-    public class Address: BaseEntity
+    public class Address:BaseEntity
     {
+        [Key]
+        public Guid AddressId { get; set; }
         public String Sector { get; set; }
         public String Street { get; set; }
         public int Number { get; set; }
