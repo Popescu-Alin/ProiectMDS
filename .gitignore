@@ -7,3 +7,5 @@ packages
 /OnlineShop/OnlineShop/obj/
 /OnlineShop/OnlineShop/bin/
 
+*.vsidx
+/.vs/slnx.sqlite
