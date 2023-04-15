@@ -5,3 +5,5 @@
 /.vs/
 /OnlineShop/OnlineShop/obj/
 /OnlineShop/OnlineShop/bin/
+/OnlineShop/OnlineShop/obj/Debug/
+/OnlineShop/OnlineShop/obj/Release/
