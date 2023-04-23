@@ -89,5 +89,9 @@ namespace OnlineShop.Helpers
                 context.SaveChanges();
             }
         }
+        public static void InitializeCategorii(IServiceProvider serviceProvider)
+        {
+            using (var context = new ProiectMDSContext(serviceProvider.GetRequiredService<DbContextOptions<ProiectMDSContext>>())) ;
+        }
     }
 }

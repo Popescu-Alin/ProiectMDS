@@ -2,7 +2,9 @@ using inceputproiectMds.Models.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using MovieTracker.Services.UserService;
 using OnlineShop.Data;
 using OnlineShop.Helpers;
@@ -19,7 +21,40 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+//adaug swagger si autehtification cu jwt bearer token
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "MovieTracker", Version = "v1" });
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = @"JWT Authorization header using the Bearer scheme.
+                     Example: 'Bearer 12345abcdef'",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            },
+                            Scheme = "oauth2",
+                            Name = "Bearer",
+                            In = ParameterLocation.Header
+                        },
+                        new List<string>()
+                    }
+                });
+});
+
 
 
 //adaugare identity
@@ -62,7 +97,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ProiectMDSContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
-builder.Services.AddTransient<IProductOrderRepository, ProductOrderRepository>();
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
 builder.Services.AddTransient<ICartRepository, CartRepository>();
 
 
@@ -86,6 +121,14 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+//add a public folder to the project in which we will store the images
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "Public")),
+    RequestPath = "/Public"
+});
 
 // Authentication & Authorization
 app.UseAuthentication();

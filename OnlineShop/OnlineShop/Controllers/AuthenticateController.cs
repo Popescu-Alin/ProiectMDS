@@ -22,7 +22,7 @@ namespace OnlineShop.Controllers
         }
         [HttpPost]
         [Route("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterDTO dto)
+        public async Task<IActionResult> Register([FromBody] RegisterDTO dto)//inregisterez un user nou in baza de date
         {
             var userNameExists = await _userManager.FindByNameAsync(dto.UserName);
             if (userNameExists != null)
@@ -41,7 +41,7 @@ namespace OnlineShop.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginDTO dto)
+        public async Task<IActionResult> Login([FromBody] LoginDTO dto)//generez un token daca logarea este reusita
         {
             var token = await _userService.LoginUser(dto);
 
