@@ -11,6 +11,7 @@ using OnlineShop.Helpers;
 using OnlineShop.Repositories.CardRepository;
 using OnlineShop.Repositories.CategoryRepositories;
 using OnlineShop.Repositories.ProductsRepository;
+using OnlineShop.Repositories.ReviewRepository;
 using OnlineShop.Services.UserService;
 using System.Text;
 
@@ -99,6 +100,7 @@ builder.Services.AddDbContext<ProiectMDSContext>(options => options.UseSqlServer
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
 builder.Services.AddTransient<ICartRepository, CartRepository>();
+builder.Services.AddTransient<IReviewRepository, ReviewRepository>();
 
 
 builder.Services.AddScoped<IUserService,UserService>();

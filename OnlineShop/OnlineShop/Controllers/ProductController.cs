@@ -26,6 +26,8 @@ namespace OnlineShop.Controllers
             _categoryRepo = repoCateg;
             _userManager = userMan;
         }
+        
+        
         [HttpGet]
         [Route("GetAll")]
         [AllowAnonymous]
@@ -54,7 +56,7 @@ namespace OnlineShop.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin,Colaborator")]
-        public async Task<IActionResult> Create([FromForm] ProductDTO dto)
+        public async Task<IActionResult> New([FromForm] ProductDTO dto)//adaug un produs in magazin
         {
 
             var product = new Product(dto);
@@ -88,15 +90,15 @@ namespace OnlineShop.Controllers
 
         [HttpPut]
         [Authorize(Roles = "Admin,Colaborator")]
-        public async Task<IActionResult> Update([FromForm] ProductDTO dto ,Guid id)
+        public async Task<IActionResult> Update([FromForm] ProductDTO dto ,Guid id)//fac update la un produs din magazin
         {
             var product = await _productRepo.FindByIdAsync(id);
 
-            if (product == null) 
+            if (product == null) //verific sa existe produsul cu un anumit id
                 return NotFound("No product with that id");
             
 
-            if (product.UserId.ToString() != User.FindFirst(ClaimTypes.NameIdentifier).Value)
+            if (product.UserId.ToString() != User.FindFirst(ClaimTypes.NameIdentifier).Value)//verific daca produsul apartine userului care face update
                 return Unauthorized("You don't have acces to this product");
 
             var img = dto.Photo;
@@ -107,16 +109,13 @@ namespace OnlineShop.Controllers
             product.CategoryId=dto.CategoryId;
             product.Title=dto.Title;
 
-            DeleteImgAsync(product.Photo);
+           
 
             if (img != null) {
-                product.Photo= await SaveImgAsync(img);
+                DeleteImgAsync(product.Photo);//sterg imaginea veche
+                product.Photo= await SaveImgAsync(img);//o modific cu cea noua
             }
-            else
-            {
-                product.Photo = "";
-            }
-
+            
             _productRepo.Update(product);
             bool saved = await _productRepo.SaveAsync(); //salvez modificarile si verific daca e ok
             return saved ? Ok() : BadRequest("A aparut o eroare");
@@ -125,23 +124,38 @@ namespace OnlineShop.Controllers
 
 
         [HttpDelete]
+        [Route("Delete{id}")]
         [Authorize(Roles = "Admin,Colaborator")]
-        
-        public async Task<IActionResult> Delete(Guid id)
+        public async Task<IActionResult> Delete(Guid id)//sterg un produs din magazin
         {
             var product = await _productRepo.FindByIdAsync(id);
-            if ( product == null)
+            if (product == null)   //verific ca prousul cu un anumit id sa existe
                 return NotFound("No product with this id");
-            
 
-            if(product.UserId.ToString()!= User.FindFirst(ClaimTypes.NameIdentifier).Value)
+
+            if (product.UserId.ToString() != User.FindFirst(ClaimTypes.NameIdentifier).Value)//verific daca produsul apartine userului care face update
                 return Unauthorized("You don't have acces to this product");
 
-            DeleteImgAsync(product.Photo);
-            _productRepo.Delete(product);
+            DeleteImgAsync(product.Photo);//sterg poza
+            _productRepo.Delete(product);//sterg prousul
             bool saved = await _productRepo.SaveAsync(); //salvez modificarile si verific daca e ok
             return saved ? Ok() : BadRequest("A aparut o eroare");
         }
+
+        [HttpGet]
+        [AllowAnonymous]
+        [Route("Get{id}")]
+        public async Task<IActionResult> Get(Guid id)//returneaza un produs din magazin
+        {
+            var product = await _productRepo.FindByIdAsync(id);
+            if (product == null) //verific sa existe produsul cu un anumit id
+                return NotFound("No product with that id");
+            
+            await AddCategoryAndUser(product);
+            return Ok(new ProductSendDTO(product));
+        }
+
+        
 
         [NonAction]
         private async Task<bool> AddCategoryAndUser(Product x)

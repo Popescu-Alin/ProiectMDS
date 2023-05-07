@@ -3,7 +3,7 @@ using inceputproiectMds.Repositories.GenericRepository;
 
 namespace OnlineShop.Repositories.AddressRepository
 {
-    public interface IAddressRepository: IGenericRepository<Address>
+    public interface IAddressRepository : IGenericRepository<Address>
     {
     }
 }
