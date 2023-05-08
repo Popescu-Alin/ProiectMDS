@@ -1,4 +1,5 @@
 ﻿using inceputproiectMds.Models.Base;
+using OnlineShop.Models.DTOs;
 using System.ComponentModel.DataAnnotations;
 
 namespace inceputproiectMds.Models.Entities
@@ -14,5 +15,17 @@ namespace inceputproiectMds.Models.Entities
 
         public virtual ICollection<Order>? Orders { get; set; }
         public virtual ICollection<UserAddress>? UserAddresses { get; set; }
+
+        public Address() { }
+        public Address(AddressDTO address)
+        {
+            AddressId = new Guid();
+            Sector = address.Sector;
+            Street = address.Street;
+            Number = address.Number;
+            Others = address.Others;
+            DateCreated = DateTime.Now;
+            DateModified = DateTime.Now;
+        }
     }
 }

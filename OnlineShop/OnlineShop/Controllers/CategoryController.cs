@@ -43,20 +43,18 @@ namespace OnlineShop.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(Guid id) //sterg o categorie
         {
-            if (ModelState.IsValid)
+            
+            Category? categ = await _categRepo.FindByIdAsync(id); //obtin categoria pe care vreau sa o sterg
+
+            if (categ == null) //daca nu exista
             {
-                Category? categ = await _categRepo.FindByIdAsync(id); //obtin categoria pe care vreau sa o sterg
-
-                if (categ == null) //daca nu exista
-                {
-                    return NotFound("Nu exista categoria");
-                }
-
-                _categRepo.Delete(categ); //sterg categoria
-                bool saved = await _categRepo.SaveAsync(); //salvez modificarile si verific daca e ok
-                return saved ? Ok() : BadRequest("A aparut o eroare");
+                return NotFound("Nu exista categoria");
             }
-            return BadRequest();
+
+            _categRepo.Delete(categ); //sterg categoria
+            bool saved = await _categRepo.SaveAsync(); //salvez modificarile si verific daca e ok
+            return saved ? Ok() : BadRequest("A aparut o eroare");
+            
         }
 
         [HttpPut]

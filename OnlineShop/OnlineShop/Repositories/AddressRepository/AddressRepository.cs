@@ -4,9 +4,9 @@ using OnlineShop.Repositories.GenericRepository;
 
 namespace OnlineShop.Repositories.AddressRepository
 {
-    public class ReviewRepository : GenericRepository<Address>, IAddressRepository
+    public class AddressRepository : GenericRepository<Address>, IAddressRepository
     {
-        public ReviewRepository(ProiectMDSContext context) : base(context)
+        public AddressRepository(ProiectMDSContext context) : base(context)
         {
         }
     }
