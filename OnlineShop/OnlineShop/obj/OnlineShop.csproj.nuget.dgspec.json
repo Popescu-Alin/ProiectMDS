@@ -40,6 +40,7 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+<<<<<<< HEAD
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.16, )"
@@ -48,6 +49,8 @@
               "target": "Package",
               "version": "[6.0.16, )"
             },
+=======
+>>>>>>> parent of 092e248 (Altered file structure)
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.4, )"

@@ -9,9 +9,17 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OnlineShop
 build_property.RootNamespace = OnlineShop
+<<<<<<< HEAD
 build_property.ProjectDir = D:\Test\OnlineShop\OnlineShop\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = D:\Test\OnlineShop\OnlineShop
+=======
+build_property.ProjectDir = C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop
+>>>>>>> parent of 092e248 (Altered file structure)
 build_property._RazorSourceGeneratorDebug = 

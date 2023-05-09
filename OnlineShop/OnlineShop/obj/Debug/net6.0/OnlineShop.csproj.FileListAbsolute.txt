@@ -172,6 +172,7 @@ D:\PoiectMDS\OnlineShop\OnlineShop\obj\Debug\net6.0\refint\OnlineShop.dll
 D:\PoiectMDS\OnlineShop\OnlineShop\obj\Debug\net6.0\OnlineShop.pdb
 D:\PoiectMDS\OnlineShop\OnlineShop\obj\Debug\net6.0\OnlineShop.genruntimeconfig.cache
 D:\PoiectMDS\OnlineShop\OnlineShop\obj\Debug\net6.0\ref\OnlineShop.dll
+<<<<<<< HEAD
 D:\Test\OnlineShop\OnlineShop\obj\Debug\net6.0\OnlineShop.csproj.AssemblyReference.cache
 D:\Test\OnlineShop\OnlineShop\obj\Debug\net6.0\OnlineShop.GeneratedMSBuildEditorConfig.editorconfig
 D:\Test\OnlineShop\OnlineShop\obj\Debug\net6.0\OnlineShop.AssemblyInfoInputs.cache
@@ -265,6 +266,8 @@ D:\Test\OnlineShop\OnlineShop\obj\Debug\net6.0\scopedcss\bundle\OnlineShop.style
 D:\Test\OnlineShop\OnlineShop\obj\Debug\net6.0\OnlineShop.csproj.CopyComplete
 D:\Test\OnlineShop\OnlineShop\obj\Debug\net6.0\OnlineShop.genruntimeconfig.cache
 D:\Test\OnlineShop\OnlineShop\obj\Debug\net6.0\ref\OnlineShop.dll
+=======
+>>>>>>> parent of 092e248 (Altered file structure)
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\appsettings.json
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\OnlineShop.exe
@@ -275,10 +278,13 @@ C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Azure.Identity.dll
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Humanizer.dll
+<<<<<<< HEAD
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+=======
+>>>>>>> parent of 092e248 (Altered file structure)
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -292,8 +298,11 @@ C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+<<<<<<< HEAD
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+=======
+>>>>>>> parent of 092e248 (Altered file structure)
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Narcis\Desktop\SEM2\MDS\Proiect\OnlineShop\OnlineShop\bin\Debug\net6.0\Microsoft.Extensions.Options.dll

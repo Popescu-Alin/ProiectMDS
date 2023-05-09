@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using inceputproiectMds.Models.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -17,6 +18,13 @@ using OnlineShop.Repositories.ReviewRepository;
 using OnlineShop.Repositories.UserAddressRepository;
 using OnlineShop.Services.UserService;
 using System.Text;
+=======
+using Microsoft.EntityFrameworkCore;
+using OnlineShop.Data;
+using OnlineShop.Repositories.CardRepository;
+using OnlineShop.Repositories.CategoryRepositories;
+using OnlineShop.Repositories.ProductsRepository;
+>>>>>>> parent of 092e248 (Altered file structure)
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +33,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+<<<<<<< HEAD
 
 //adaug swagger si autehtification cu jwt bearer token
 builder.Services.AddSwaggerGen(c =>
@@ -97,10 +106,15 @@ builder.Services.AddAuthentication(auth =>
 
 
 //conexiunea cu baza de date
+=======
+builder.Services.AddSwaggerGen();
+
+>>>>>>> parent of 092e248 (Altered file structure)
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ProiectMDSContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
+<<<<<<< HEAD
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
 builder.Services.AddTransient<IAddressRepository, AddressRepository>();
 builder.Services.AddTransient<IReviewRepository, ReviewRepository>();
@@ -120,6 +134,12 @@ using (var scope = app.Services.CreateScope())
     var servicies = scope.ServiceProvider;
     SeedData.Initialize(servicies); 
 }
+=======
+builder.Services.AddTransient<IProductOrderRepository, ProductOrderRepository>();
+builder.Services.AddTransient<ICartRepository, CartRepository>();
+var app = builder.Build();
+
+>>>>>>> parent of 092e248 (Altered file structure)
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -128,6 +148,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+<<<<<<< HEAD
 
 app.UseHttpsRedirection();
 
@@ -141,10 +162,17 @@ app.UseStaticFiles(new StaticFileOptions
 
 // Authentication & Authorization
 app.UseAuthentication();
+=======
+app.UseHttpsRedirection();
+
+>>>>>>> parent of 092e248 (Altered file structure)
 app.UseAuthorization();
 
 app.MapControllers();
 
+<<<<<<< HEAD
 app.UseCors(action => action.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
+=======
+>>>>>>> parent of 092e248 (Altered file structure)
 app.Run();

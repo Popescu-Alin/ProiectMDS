@@ -59,6 +59,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.16": {
         "type": "package",
         "dependencies": {
@@ -124,6 +125,8 @@
           }
         }
       },
+=======
+>>>>>>> parent of 092e248 (Altered file structure)
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -447,6 +450,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.Extensions.Identity.Core/6.0.16": {
         "type": "package",
         "dependencies": {
@@ -483,6 +487,8 @@
           }
         }
       },
+=======
+>>>>>>> parent of 092e248 (Altered file structure)
       "Microsoft.Extensions.Logging/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -1403,6 +1409,7 @@
         "logo.png"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.16": {
       "sha512": "T4AkjPXOYDqDnfb8PRRHNbB2ozLg9J7CsRZ+jH1MfQGshkFosdwja9c4+QVbKm+1qeLPxul+3weSz+DEvFkA5w==",
       "type": "package",
@@ -1471,6 +1478,8 @@
         "microsoft.aspnetcore.identity.entityframeworkcore.nuspec"
       ]
     },
+=======
+>>>>>>> parent of 092e248 (Altered file structure)
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "sha512": "yuvf07qFWFqtK3P/MRkEKLhn5r2UbSpVueRziSqj0yJQIKFwG1pq9mOayK3zE5qZCTs0CbrwL9M6R8VwqyGy2w==",
       "type": "package",
@@ -1946,6 +1955,7 @@
         "useSharedDesignerContext.txt"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.Extensions.Identity.Core/6.0.16": {
       "sha512": "vkKd52WAShSBBy/xLxonOXYtJ/gdPmRpc3ZDzzslxop/JQ/FoFSNjji/8H6J+F8Pyr/IjKKmx6PnUDoV4qhEMg==",
       "type": "package",
@@ -1984,6 +1994,8 @@
         "microsoft.extensions.identity.stores.nuspec"
       ]
     },
+=======
+>>>>>>> parent of 092e248 (Altered file structure)
     "Microsoft.Extensions.Logging/7.0.0": {
       "sha512": "Nw2muoNrOG5U5qa2ZekXwudUn2BJcD41e65zwmDHb1fQegTX66UokLWZkJRpqSSHXDOWZ5V0iqhbxOEky91atA==",
       "type": "package",
@@ -3923,8 +3935,11 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+<<<<<<< HEAD
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.16",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.16",
+=======
+>>>>>>> parent of 092e248 (Altered file structure)
       "Microsoft.EntityFrameworkCore >= 7.0.4",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.4",
@@ -3971,6 +3986,7 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+<<<<<<< HEAD
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[6.0.16, )"
@@ -3979,6 +3995,8 @@
             "target": "Package",
             "version": "[6.0.16, )"
           },
+=======
+>>>>>>> parent of 092e248 (Altered file structure)
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.4, )"
