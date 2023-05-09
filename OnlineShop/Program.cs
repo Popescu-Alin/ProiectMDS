@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using inceputproiectMds.Models.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -16,6 +17,13 @@ using OnlineShop.Repositories.ReviewRepository;
 using OnlineShop.Repositories.UserAddressRepository;
 using OnlineShop.Services.UserService;
 using System.Text;
+=======
+using Microsoft.EntityFrameworkCore;
+using OnlineShop.Data;
+using OnlineShop.Repositories.CardRepository;
+using OnlineShop.Repositories.CategoryRepositories;
+using OnlineShop.Repositories.ProductsRepository;
+>>>>>>> 092e24880e1fba1f81168a843069f81a1c063986
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +32,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+<<<<<<< HEAD
 
 //adaug swagger si autehtification cu jwt bearer token
 builder.Services.AddSwaggerGen(c =>
@@ -96,10 +105,15 @@ builder.Services.AddAuthentication(auth =>
 
 
 //conexiunea cu baza de date
+=======
+builder.Services.AddSwaggerGen();
+
+>>>>>>> 092e24880e1fba1f81168a843069f81a1c063986
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ProiectMDSContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
+<<<<<<< HEAD
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
 builder.Services.AddTransient<ICartRepository, CartRepository>();
 builder.Services.AddTransient<IReviewRepository, ReviewRepository>();
@@ -119,6 +133,12 @@ using (var scope = app.Services.CreateScope())
     var servicies = scope.ServiceProvider;
     SeedData.Initialize(servicies); 
 }
+=======
+builder.Services.AddTransient<IProductOrderRepository, ProductOrderRepository>();
+builder.Services.AddTransient<ICartRepository, CartRepository>();
+var app = builder.Build();
+
+>>>>>>> 092e24880e1fba1f81168a843069f81a1c063986
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -127,6 +147,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+<<<<<<< HEAD
 
 app.UseHttpsRedirection();
 
@@ -140,10 +161,17 @@ app.UseStaticFiles(new StaticFileOptions
 
 // Authentication & Authorization
 app.UseAuthentication();
+=======
+app.UseHttpsRedirection();
+
+>>>>>>> 092e24880e1fba1f81168a843069f81a1c063986
 app.UseAuthorization();
 
 app.MapControllers();
 
+<<<<<<< HEAD
 app.UseCors(action => action.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
+=======
+>>>>>>> 092e24880e1fba1f81168a843069f81a1c063986
 app.Run();
