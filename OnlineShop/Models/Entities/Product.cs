@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using inceputproiectMds.Models.Base;
+using OnlineShop.Models.DTOs;
 
 namespace inceputproiectMds.Models.Entities
 {
@@ -25,7 +26,7 @@ namespace inceputproiectMds.Models.Entities
         public string? Photo { get; set; }
 
         [Required(ErrorMessage = "Categoria este obligatorie")]
-        public Guid ?CategoryId { get; set; }
+        public Guid CategoryId { get; set; }
 
         public Boolean Approved { get; set; }
 
@@ -42,7 +43,24 @@ namespace inceputproiectMds.Models.Entities
 
         public virtual ICollection<ProductOrder>? Orders { get; set; }  
 
-        [NotMapped]
-        public IEnumerable<SelectListItem>? Categ { get; set; }
+
+        public Product()
+        {
+        }
+
+        public Product(ProductDTO productDTO)
+        {
+            ProductId = new ();
+            Title = productDTO.Title;
+            Description = productDTO.Description;
+            Price = productDTO.Price;
+            Stars = 0;
+            Photo = "";
+            CategoryId = productDTO.CategoryId;
+            UserId = null;
+            Quantity = productDTO.Quantity;
+            DateCreated= DateTime.Now;
+            DateModified = DateTime.Now;
+        }
     }
 }

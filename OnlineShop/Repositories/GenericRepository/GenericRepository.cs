@@ -28,7 +28,9 @@ namespace OnlineShop.Repositories.GenericRepository
         
 
         public async Task CreateAsync(TEntity entity)
-        {
+        {   
+            entity.DateCreated = DateTime.Now;
+            entity.DateModified = DateTime.Now;
             await _table.AddAsync(entity);
         }
 
@@ -45,6 +47,7 @@ namespace OnlineShop.Repositories.GenericRepository
         // update
         public void Update(TEntity entity)
         {
+            entity.DateModified = DateTime.Now;
             _table.Update(entity);
         }
 
