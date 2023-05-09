@@ -4,9 +4,9 @@ using OnlineShop.Repositories.GenericRepository;
 
 namespace OnlineShop.Repositories.CardRepository
 {
-    public class CartRepository : GenericRepository<Card>, ICartRepository
+    public class CardRepository : GenericRepository<Card>, ICardRepository
     {
-        public CartRepository(ProiectMDSContext context) : base(context)
+        public CardRepository(ProiectMDSContext context) : base(context)
         {
         }
     }

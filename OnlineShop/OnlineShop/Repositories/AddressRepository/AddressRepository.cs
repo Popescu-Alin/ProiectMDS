@@ -1,6 +1,7 @@
 ﻿using inceputproiectMds.Models.Entities;
 using OnlineShop.Data;
 using OnlineShop.Repositories.GenericRepository;
+using OnlineShop.Repositories.UserAddressRepository;
 
 namespace OnlineShop.Repositories.AddressRepository
 {
