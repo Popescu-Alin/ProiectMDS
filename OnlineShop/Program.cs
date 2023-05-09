@@ -9,12 +9,10 @@ using Microsoft.OpenApi.Models;
 using MovieTracker.Services.UserService;
 using OnlineShop.Data;
 using OnlineShop.Helpers;
-using OnlineShop.Repositories.AddressRepository;
 using OnlineShop.Repositories.CardRepository;
 using OnlineShop.Repositories.CategoryRepositories;
 using OnlineShop.Repositories.ProductsRepository;
 using OnlineShop.Repositories.ReviewRepository;
-using OnlineShop.Repositories.UserAddressRepository;
 using OnlineShop.Services.UserService;
 using System.Text;
 =======
@@ -117,9 +115,6 @@ builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
 builder.Services.AddTransient<ICartRepository, CartRepository>();
 builder.Services.AddTransient<IReviewRepository, ReviewRepository>();
-builder.Services.AddTransient<ICartRepository,CartRepository>();
-builder.Services.AddTransient<IAddressRepository, AddressRepository>();
-builder.Services.AddTransient<IUserAddressRepository, UserAddressRepository>();
 
 
 builder.Services.AddScoped<IUserService,UserService>();
@@ -147,8 +142,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+<<<<<<< HEAD:OnlineShop/Program.cs
 <<<<<<< HEAD
 
+=======
+>>>>>>> parent of d5dc1de (AllFromAlinNeedMoreTestes):OnlineShop/OnlineShop/Program.cs
 app.UseHttpsRedirection();
 
 //add a public folder to the project in which we will store the images
@@ -169,9 +167,12 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+<<<<<<< HEAD:OnlineShop/Program.cs
 <<<<<<< HEAD
 app.UseCors(action => action.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
 =======
 >>>>>>> 092e24880e1fba1f81168a843069f81a1c063986
+=======
+>>>>>>> parent of d5dc1de (AllFromAlinNeedMoreTestes):OnlineShop/OnlineShop/Program.cs
 app.Run();

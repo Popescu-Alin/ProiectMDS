@@ -30,15 +30,15 @@ namespace OnlineShop.Controllers
         [HttpGet]
         [Route("Get{id}")]
         [AllowAnonymous]
-        public async Task<List<ReviewSendDTO>?> GetReviwesProduct(Guid idProduct)//o functie care returneaza o lista de review-uri ale unui produs, id-ul produsului este dat ca parametru
+        public async Task<List<ReviewSendDTO>?> Get(Guid id)//o functie care returneaza o lista de review-uri ale unui produs, id-ul produsului este dat ca parametru
         {
-            var product = await _productRepository.FindByIdAsync(idProduct);
+            var product = await _productRepository.FindByIdAsync(id);
             
             if (product == null)
             {
                 return null; //daca nu exista acest produs se va intoarce null.
             }
-            var reviwes = await _reviewRepo.GetAllReviewsOfProductAsync(idProduct);
+            var reviwes = await _reviewRepo.GetAllReviewsOfProductAsync(id);
             foreach (var review in reviwes)
             {
                 await AddUser(review);
