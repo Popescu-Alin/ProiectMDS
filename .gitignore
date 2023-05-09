@@ -2,16 +2,4 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-<<<<<<< HEAD
 /.vs/Proiect/
-=======
-<<<<<<< HEAD
-/OnlineShop/OnlineShop/obj/
-/OnlineShop/OnlineShop/bin/
-/OnlineShop/OnlineShop/obj/Debug/
-/OnlineShop/OnlineShop/obj/Release/
-=======
-/.vs/Proiect
->>>>>>> main
-/.vs/slnx.sqlite
->>>>>>> parent of 092e248 (Altered file structure)
