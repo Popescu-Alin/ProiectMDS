@@ -361,4 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/OnlineShop/obj/Debug/net6.0/OnlineShop.AssemblyInfo.cs
+obj/
+bin/
+.vs/	
