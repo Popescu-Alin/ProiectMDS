@@ -15,6 +15,7 @@ using OnlineShop.Repositories.CategoryRepositories;
 using OnlineShop.Repositories.ProductsRepository;
 using OnlineShop.Repositories.ReviewRepository;
 using OnlineShop.Repositories.UserAddressRepository;
+using OnlineShop.Repositories.UserCardRepository;
 using OnlineShop.Services.UserService;
 using System.Text;
 
@@ -107,7 +108,7 @@ builder.Services.AddTransient<IReviewRepository, ReviewRepository>();
 builder.Services.AddTransient<ICartRepository,CartRepository>();
 builder.Services.AddTransient<ICardRepository, CardRepository>();
 builder.Services.AddTransient<IUserAddressRepository, UserAddressRepository>();
-
+builder.Services.AddTransient<IUserCardRepository, UserCardRepository>();
 
 builder.Services.AddScoped<IUserService,UserService>();
 
