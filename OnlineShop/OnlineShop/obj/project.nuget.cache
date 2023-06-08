@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fUB2T1FxRkZI9D4zaIn9ewEqgYLl1ZBhErpCE6mXiHYZd6ilpujRyxuKxgwyooRxXSV1wWagEPaglx81p3TW5g==",
+  "dgSpecHash": "seb0onNaNkFGnKSBlWnuc9T2ENFML1jfy9flQE7j4uKUP8L7LwxLvVB6RcVIGhddvIZXYy4nmAMs914q1tL3Ww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Narcis\\Desktop\\SEM2\\MDS\\Proiect\\OnlineShop\\OnlineShop\\OnlineShop.csproj",
+  "projectFilePath": "C:\\Users\\Narcis\\Desktop\\School\\MDS\\Proiect\\OnlineShop\\OnlineShop\\OnlineShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Narcis\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Narcis\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

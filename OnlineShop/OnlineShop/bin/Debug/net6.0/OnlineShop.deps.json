@@ -8,11 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "OnlineShop/1.0.0": {
         "dependencies": {
-<<<<<<< HEAD
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.16",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.16",
-=======
->>>>>>> main
           "Microsoft.EntityFrameworkCore": "7.0.4",
           "Microsoft.EntityFrameworkCore.Design": "7.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.4",
@@ -65,7 +62,6 @@
           }
         }
       },
-<<<<<<< HEAD
       "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.16": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.21.0"
@@ -108,8 +104,6 @@
           }
         }
       },
-=======
->>>>>>> main
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -320,7 +314,6 @@
           }
         }
       },
-<<<<<<< HEAD
       "Microsoft.Extensions.Identity.Core/6.0.16": {
         "dependencies": {
           "Microsoft.AspNetCore.Cryptography.KeyDerivation": "6.0.16",
@@ -347,8 +340,6 @@
           }
         }
       },
-=======
->>>>>>> main
       "Microsoft.Extensions.Logging/7.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
@@ -856,7 +847,6 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
-<<<<<<< HEAD
     "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.16": {
       "type": "package",
       "serviceable": true,
@@ -885,8 +875,6 @@
       "path": "microsoft.aspnetcore.identity.entityframeworkcore/6.0.16",
       "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.6.0.16.nupkg.sha512"
     },
-=======
->>>>>>> main
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",
       "serviceable": true,
@@ -1013,7 +1001,6 @@
       "path": "microsoft.extensions.dependencymodel/7.0.0",
       "hashPath": "microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512"
     },
-<<<<<<< HEAD
     "Microsoft.Extensions.Identity.Core/6.0.16": {
       "type": "package",
       "serviceable": true,
@@ -1028,8 +1015,6 @@
       "path": "microsoft.extensions.identity.stores/6.0.16",
       "hashPath": "microsoft.extensions.identity.stores.6.0.16.nupkg.sha512"
     },
-=======
->>>>>>> main
     "Microsoft.Extensions.Logging/7.0.0": {
       "type": "package",
       "serviceable": true,

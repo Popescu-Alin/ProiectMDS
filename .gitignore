@@ -371,4 +371,7 @@ FodyWeavers.xsd
 
 /.vs/Proiect/
 >>>>>>> main
-/.vs/Proiect/v17/.wsuo
+/.vs
+/OnlineShop/.vs
+/OnlineShop/OnlineShop/bin
+/OnlineShop/OnlineShop/obj
