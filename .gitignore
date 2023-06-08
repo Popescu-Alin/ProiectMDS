@@ -368,3 +368,7 @@ OnlineShop/bin
 OnlineShop/OnlineShow/obj
 OnlineShop/OnlineShow/bin
 OnlineShop/OnlineShow/.vs
+/OnlineShop/OnlineShop/obj/Debug
+/OnlineShop/OnlineShop/bin/Debug
+/OnlineShop/OnlineShop/obj/Release
+/OnlineShop/OnlineShop/bin/Release
