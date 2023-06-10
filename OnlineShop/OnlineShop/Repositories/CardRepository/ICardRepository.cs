@@ -3,7 +3,7 @@ using inceputproiectMds.Repositories.GenericRepository;
 
 namespace OnlineShop.Repositories.CardRepository
 {
-    public interface ICartRepository: IGenericRepository<Card>
+    public interface ICardRepository: IGenericRepository<Card>
     {
     }
 }

@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\OnlineShop",
+    "\\OnlineShop\\OnlineShop"
   ],
+<<<<<<< HEAD
+  "SelectedNode": "\\OnlineShop\\OnlineShop",
+=======
+  "SelectedNode": "\\C:\\Users\\Narcis\\Desktop\\SEM2\\MDS\\Proiect",
+>>>>>>> main
   "PreviewInSolutionExplorer": false
 }

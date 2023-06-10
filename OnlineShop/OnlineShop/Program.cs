@@ -10,10 +10,12 @@ using OnlineShop.Data;
 using OnlineShop.Helpers;
 using OnlineShop.Repositories.AddressRepository;
 using OnlineShop.Repositories.CardRepository;
+using OnlineShop.Repositories.CartRepository;
 using OnlineShop.Repositories.CategoryRepositories;
 using OnlineShop.Repositories.ProductsRepository;
 using OnlineShop.Repositories.ReviewRepository;
 using OnlineShop.Repositories.UserAddressRepository;
+using OnlineShop.Repositories.UserCardRepository;
 using OnlineShop.Services.UserService;
 using System.Text;
 
@@ -101,12 +103,12 @@ builder.Services.AddDbContext<ProiectMDSContext>(options => options.UseSqlServer
 
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
-builder.Services.AddTransient<ICartRepository, CartRepository>();
+builder.Services.AddTransient<IAddressRepository, AddressRepository>();
 builder.Services.AddTransient<IReviewRepository, ReviewRepository>();
 builder.Services.AddTransient<ICartRepository,CartRepository>();
-builder.Services.AddTransient<IAddressRepository, AddressRepository>();
+builder.Services.AddTransient<ICardRepository, CardRepository>();
 builder.Services.AddTransient<IUserAddressRepository, UserAddressRepository>();
-
+builder.Services.AddTransient<IUserCardRepository, UserCardRepository>();
 
 builder.Services.AddScoped<IUserService,UserService>();
 
