@@ -109,6 +109,13 @@ builder.Services.AddScoped<IUserService,UserService>();
 
 var app = builder.Build();
 
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "Public")),
+    RequestPath = "/Public"
+});
+
 using (var scope = app.Services.CreateScope())
 {
     var servicies = scope.ServiceProvider;
@@ -138,4 +145,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseCors(action => action.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 app.Run();

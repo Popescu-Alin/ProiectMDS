@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\OnlineShop",
+    "\\OnlineShop\\OnlineShop",
+    "\\OnlineShop\\OnlineShop\\Controllers",
+    "\\OnlineShop\\OnlineShop\\Models"
   ],
+  "SelectedNode": "\\OnlineShop\\OnlineShop.sln",
   "PreviewInSolutionExplorer": false
 }

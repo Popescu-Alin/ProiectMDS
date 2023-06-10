@@ -65,7 +65,7 @@ namespace OnlineShop.Controllers
             var img = dto.Photo;
 
             //pozele pot fi dor png sau jpg sau jpeg
-            if (new List<String>() { ".jpg", ".jpeg", ".png" }.Contains(Path.GetExtension(img.FileName).ToLower()) == false)
+            if (new List<String>() { ".jpg", ".jpeg", ".png", ".avif" }.Contains(Path.GetExtension(img.FileName).ToLower()) == false)
             {
                 return BadRequest();
             }
