@@ -32,16 +32,21 @@ namespace OnlineShop.Repositories.ProductsRepository
             return await _table.Where(x => x.UserId == userId).ToListAsync();
         }
 
-        public async Task<List<Product>> GetAllAsync(int offset, int limit)
+        public async Task<List<Product>> GetAllAsync(int offset, int limit, bool sorted)
         {
-            return await _table.Skip(offset).Take(limit).ToListAsync();
+            if (sorted)
+            {
+                return await _table.OrderBy(x => x.Price).Skip(offset).Take(limit).ToListAsync();
+            }
+            else
+            {
+                return await _table.Skip(offset).Take(limit).ToListAsync();
+            }
         }
-        
-        
-        
-       
 
-       
-       
+        public async Task<int> GetNumberOfProducts()
+        {
+            return await _table.CountAsync();
+        }
     }
 }
