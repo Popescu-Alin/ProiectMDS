@@ -96,7 +96,7 @@ namespace OnlineShop.Data
             modelBuilder.Entity<UserAddress>()
             .HasOne(ab => ab.Address)
             .WithMany(ab => ab.UserAddresses)
-            .HasForeignKey(ab => ab.UserId);
+            .HasForeignKey(ab => ab.AddressId);
 
             modelBuilder.Entity<UserCard>()
              .HasKey(cp => new
@@ -111,7 +111,7 @@ namespace OnlineShop.Data
             modelBuilder.Entity<UserCard>()
             .HasOne(ab => ab.Card)
             .WithMany(ab => ab.UserCards)
-            .HasForeignKey(ab => ab.UserId);
+            .HasForeignKey(ab => ab.CardId);
 
             modelBuilder.Entity<UserRole>(ur =>
             {

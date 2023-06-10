@@ -148,6 +148,10 @@ namespace OnlineShop.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CardNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DateCreated")
                         .HasColumnType("datetime2");
 
@@ -494,6 +498,8 @@ namespace OnlineShop.Migrations
 
                     b.HasKey("UserId", "AddressId");
 
+                    b.HasIndex("AddressId");
+
                     b.ToTable("UserAddresses");
                 });
 
@@ -512,6 +518,8 @@ namespace OnlineShop.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("UserId", "CardId");
+
+                    b.HasIndex("CardId");
 
                     b.ToTable("UserCards");
                 });
@@ -677,7 +685,7 @@ namespace OnlineShop.Migrations
                 {
                     b.HasOne("inceputproiectMds.Models.Entities.Address", "Address")
                         .WithMany("UserAddresses")
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("AddressId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -696,7 +704,7 @@ namespace OnlineShop.Migrations
                 {
                     b.HasOne("inceputproiectMds.Models.Entities.Card", "Card")
                         .WithMany("UserCards")
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("CardId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

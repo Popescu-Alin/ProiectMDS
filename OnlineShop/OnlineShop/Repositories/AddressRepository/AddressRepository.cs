@@ -1,12 +1,13 @@
 ﻿using inceputproiectMds.Models.Entities;
 using OnlineShop.Data;
 using OnlineShop.Repositories.GenericRepository;
+using OnlineShop.Repositories.UserAddressRepository;
 
 namespace OnlineShop.Repositories.AddressRepository
 {
-    public class ReviewRepository : GenericRepository<Address>, IAddressRepository
+    public class AddressRepository : GenericRepository<Address>, IAddressRepository
     {
-        public ReviewRepository(ProiectMDSContext context) : base(context)
+        public AddressRepository(ProiectMDSContext context) : base(context)
         {
         }
     }
