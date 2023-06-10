@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using OnlineShop.Models.DTOs;
+using OnlineShop.Models.Entities;
 using OnlineShop.Repositories.CategoryRepositories;
 using OnlineShop.Repositories.ProductsRepository;
 using System.Data;
@@ -31,27 +32,32 @@ namespace OnlineShop.Controllers
         [HttpGet]
         [Route("GetAll")]
         [AllowAnonymous]
-        public async Task<List<ProductSendDTO>> Index()//returneaza toate produsele din magazin
+        public async Task<ProductList> Index()//returneaza toate produsele din magazin
         {
             var products = await _productRepo.GetAllAsync();
             foreach (Product x in products) {
                 await AddCategoryAndUser(x);
             }
-            return products.Select(x => new ProductSendDTO(x)).ToList();
+            return new()
+            {
+                Products = products.Select(x => new ProductSendDTO(x)).ToList(),
+                Total = await _productRepo.GetNumberOfProducts()
+            };
         }
 
 
         [HttpGet]
         [Route("GetAllRange")]
         [AllowAnonymous]
-        public async Task<List<ProductSendDTO>> Index(int offset, int limit)//returneaza toate produsele din magazin din anumit interval
+        public async Task<ProductList> Index(int offset, int limit,bool sorted)//returneaza toate produsele din magazin din anumit interval,sortate dupa pret
         {
-            var products = await _productRepo.GetAllAsync(offset, limit);
+            var products = await _productRepo.GetAllAsync(offset, limit,sorted);
             foreach (Product x in products)
             {
                 await AddCategoryAndUser(x);
             }
-            return products.Select(x => new ProductSendDTO(x)).ToList();
+            return new() { Products=products.Select(x => new ProductSendDTO(x)).ToList(),
+                            Total=await _productRepo.GetNumberOfProducts()};
         }
 
         [HttpPost]
