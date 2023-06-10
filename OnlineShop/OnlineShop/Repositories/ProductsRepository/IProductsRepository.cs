@@ -9,8 +9,8 @@ namespace OnlineShop.Repositories.ProductsRepository
         public Task<List<Product>> GetAllProduseOrdonate();
         public Task<List<Product>> GetProduseByCategory(Guid categoryId);
         public Task<List<Product>> GetProduseByUser(Guid userId);
-        public Task<List<Product>> GetAllAsync(int offset, int limit);
-
+        public Task<List<Product>> GetAllAsync(int offset, int limit,bool sorted);
+        public Task<int> GetNumberOfProducts();
 
        
     }
