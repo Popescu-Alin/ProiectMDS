@@ -26,3 +26,7 @@ Udriste Mihai-Viorel
 # UML Use Case Diagram
 
 ![UML- Use Case Diagram](https://user-images.githubusercontent.com/93095672/230381930-45695369-1d14-4864-b184-a5fba247b770.png)
+
+# Source control cu git 
+
+Our project is uploaded on github, our commits, branches and merging can be seen on [backend page] (https://github.com/Popescu-Alin/ProiectMDS) and [frontend page] (https://github.com/UMihai123/frontend)
