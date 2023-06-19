@@ -30,7 +30,7 @@ builder.Services.AddEndpointsApiExplorer();
 //adaug swagger si autehtification cu jwt bearer token
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "MovieTracker", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "PSG Shop", Version = "v1" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = @"JWT Authorization header using the Bearer scheme.
